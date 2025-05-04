@@ -7,9 +7,19 @@
   <body>
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
     <div id="jasem" v-cloak>
+      <p> {{fullName()}}</p>
+      <hr>
+      <label>first name</label>
+      <input type="text" v-model="firstName" >
+
+      <label>last name</label>
+      <input type="text" :value="lastName" @input="updateLastName">
+
+      <hr>
       <p> {{counter}}</p>
-      <button v-on:click="increament"> increament</button>
-      <button v-on:click="decreament"> decreament</button>
+      <button @click="increament"> increament</button>
+      <button @click="decreament"> decreament</button>
+
     </div>
 
     <script src="app.js"></script>

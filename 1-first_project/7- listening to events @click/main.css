@@ -1,0 +1,14 @@
+body {
+  font-size: 22px;
+  background-color: black;
+  color: papayawhip;
+}
+
+input[type="text"] {
+  margin: 10px 0;
+  display: block;
+}
+
+[v-clpal]{
+  display: none;
+}
