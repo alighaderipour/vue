@@ -1,0 +1,13 @@
+# Ignore IDE settings
+.idea/
+
+# Ignore Python cache
+__pycache__/
+*.pyc
+
+# Ignore environment folders
+venv/
+env/
+
+
+**/__pycache__/
