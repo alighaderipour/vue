@@ -10,7 +10,7 @@
       <p> {{fullName()}}</p>
       <hr>
       <label>first name</label>
-      <input type="text" :value="firstName" @input="updateFirstName" >
+      <input type="text" :value="firstName" @input="updateFirstName('firstName Method Running ==>>', $event)" >
 
       <label>last name</label>
       <input type="text" :value="lastName" @input="updateLastName">
