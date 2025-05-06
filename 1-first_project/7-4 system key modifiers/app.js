@@ -1,4 +1,4 @@
-const vm = Vue.createApp({
+    const vm = Vue.createApp({
     data() {
         return {
             counter: 0,
@@ -13,11 +13,12 @@ const vm = Vue.createApp({
         fullName() {
             return `${this.firstName} ${this.middleName} ${this.lastName}`
         },
-        increament() {
+        increment() {
             this.counter++
         },
 
-        decreament() {
+        decrement() {
+            console.log('Decrement triggered!');
             this.counter--
         },
         firstNameUpdate(msg, event){
