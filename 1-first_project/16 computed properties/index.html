@@ -7,35 +7,20 @@
 <body>
 <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
 <div id="jasem" v-cloak>
-    <p> {{fullName()}}</p>
-    <hr>
-    <label>first name</label>
-    <input type="text" :value="firstName" @input.prevent="firstNameUpdate('first name updated', $event)">
-    <label>middle name</label>
-    <input type="text" :value="middleName" @keydown.enter="middleNameUpdate">
-    <label>last name</label>
-    <input type="text" :value="lastName" @input.prevent="lastNameUpdate">
-    <p> {{ typeof counter}}</p>
-    <hr>
+    <div>
+        <h1>tax calculator</h1>
+        <lable> wage </lable>
+        <input type="number" v-model="wage"></input>
+        <lable> tax percentage</lable>
+        <input type="number" v-model="tax"></input>
+        <hr>
+        <label>tax payment with method</label>
+        <p> {{ tax_calculator_method() }}</p>
+        <label>tax payment with computed properties</label>
+        <p> {{ tax_calculator_computed }}</p>
 
-    <label> counter</label>
-    <input type="number" v-model="counter">
-    <input type="number" v-model.number="counter">
+    </div>
 
-
-    <label>first name lazy</label>
-
-
-    <button @click="increment"> increment</button>
-    <button @click.ctrl="decrement">decrement</button>
-
-    <hr>
-    <h1> lazy modifiers</h1>
-    <p> {{fullName()}}</p>
-    <label>first name</label>
-    <input type="text" v-model.lazy.trim="firstName">
-    <label>last name</label>
-    <input type="text" v-model.lazy.trim="lastName">
 </div>
 
 <script src="app.js"></script>
