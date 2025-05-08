@@ -1,0 +1,31 @@
+<!DOCTYPE>
+<html>
+
+<head>
+    <title>VueJS Course</title>
+    <link rel="stylesheet" type="text/css" href="main.css"/>
+</head>
+
+<body>
+<div id="app">
+
+<div v-model="mode">
+    <h1>v-if removes element but v-show set display to none</h1>
+    <h1>v-show expensive on load easy on toggle</h1>
+    <h1>v-if is cheap cauuse it's lazy and expensive on toggle</h1>
+    <h1>v-show if element will constantly appear and disappear from the page</h1>
+    <h1>v-if if element occasionally appear/disappear from the page</h1>
+    <label >mode value : </label>
+    <input type="number" v-model="mode">
+    <p v-if="mode==1"> if mode is euqal to 1</p>
+    <p v-show="mode ==1"> show if mode euqal to 1</p>
+
+</div>
+
+</div>
+
+<script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+<script src="app.js"></script>
+</body>
+
+</html>
