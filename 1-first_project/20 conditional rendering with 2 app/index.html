@@ -1,0 +1,36 @@
+<!DOCTYPE>
+<html>
+
+<head>
+    <title>VueJS Course</title>
+    <link rel="stylesheet" type="text/css" href="main.css"/>
+</head>
+
+<body>
+<div id="app">
+    <h1 v-if="mode == 1">v-if directive is on</h1>
+    <h1 v-else>v-else directive is off</h1>
+    <button @click="setMode">Change</button>
+
+
+</div>
+<div id="app2">
+    <hr>
+    <hr>
+    <hr>
+
+    <h1 v-if="dropMode==1"> v- if</h1>
+    <p v-else-if="dropMode==2"> v- if</p>
+    <p v-else> v-elsee</p>
+    <select v-model="dropMode">
+        <option value="1">v-if</option>
+        <option value="2">v-else-if</option>
+        <option value="3">v-else</option>
+    </select>
+</div>
+
+<script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+<script src="app.js"></script>
+</body>
+
+</html>
