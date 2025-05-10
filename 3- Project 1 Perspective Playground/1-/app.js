@@ -9,20 +9,26 @@ const vm = Vue.createApp({
     },
     methods: {
         reset() {
-            this.perspective =500
+            this.perspective = 500
             this.rotateX = 0
             this.rotateY = 0
             this.rotateZ = 0
 
+        },
+        async copy() {
+            let txt = `transform : ${this.box.transform};`
+            await navigator.clipboard.writeText(txt)
+            alert('CCS copied to Clipboard!')
         }
 
     },
     computed: {
-        box()  {
-    return {
-        transform: `perspective(${this.perspective}px) rotateX(${this.rotateX}deg) rotateY(${this.rotateY}deg) rotateZ(${this.rotateZ}deg)`
-    };
-}
+        box() {
+            return {
+                transform: `perspective(${this.perspective}px) rotateX(${this.rotateX}deg) rotateY(${this.rotateY}deg) rotateZ(${this.rotateZ}deg)`
+            };
+        },
+
 
     }
 
