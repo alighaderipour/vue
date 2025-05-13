@@ -1,48 +1,29 @@
-<script setup>
-import HelloWorld from './components/HelloWorld.vue'
-import TheWelcome from './components/TheWelcome.vue'
+<script>
+import Greetings from "./components/Greetings.vue";
+import Magic from "./components/Magic.vue";
+import Test from "./components/Test.vue";
+
+export default {
+  name: "App",
+  components: {
+    Greetings,
+    Test, 
+    Magic
+  },
+  data() {
+    return {};
+  },
+};
 </script>
 
 <template>
-  <header>
-    example
-    <img alt="Vue logo" class="logo" src="./assets/logo.svg" width="125" height="125" />
-
-    <div class="wrapper">
-      <HelloWorld msg="You did it!" />
-    </div>
-  </header>
-
-  <main>
-    <TheWelcome />
-  </main>
+  <div>
+    <Greetings></Greetings>
+    <hr>
+    <test></test>
+    <hr>
+    <Magic></Magic>
+  </div>
 </template>
 
-<style scoped>
-header {
-  line-height: 1.5;
-}
-
-.logo {
-  display: block;
-  margin: 0 auto 2rem;
-}
-
-@media (min-width: 1024px) {
-  header {
-    display: flex;
-    place-items: center;
-    padding-right: calc(var(--section-gap) / 2);
-  }
-
-  .logo {
-    margin: 0 2rem 0 0;
-  }
-
-  header .wrapper {
-    display: flex;
-    place-items: flex-start;
-    flex-wrap: wrap;
-  }
-}
-</style>
+<style></style>
