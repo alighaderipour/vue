@@ -2,27 +2,32 @@
 import Greetings from "./components/Greetings.vue";
 import Magic from "./components/Magic.vue";
 import Test from "./components/Test.vue";
+import User from "./components/User.vue";
 
 export default {
   name: "App",
   components: {
     Greetings,
     Test, 
-    Magic
+    Magic,
+    User 
   },
   data() {
-    return {};
+    return { age : 20};
   },
 };
 </script>
 
 <template>
   <div>
-    <Greetings></Greetings>
+    <button type="button" @click="age++"> increase age</button>
+    <button type="button" @click="age--"> reduce age</button>
+    <greetings :age="age"></greetings>
     <hr>
+    <user :age="age"></user>
     <test></test>
     <hr>
-    <Magic></Magic>
+    <magic></magic>
   </div>
 </template>
 
