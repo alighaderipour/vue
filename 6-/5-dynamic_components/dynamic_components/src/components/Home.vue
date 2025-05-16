@@ -1,14 +1,15 @@
 <script>
 export default {
-    unmounted(){
-        console.log("home component unmounted")
-    },
-    activate(){
-        console.log("home component activated")
-    },
-    deactivate(){
-        console.log("home component deactivated")
-    },
+  
+  unmounted() {
+    console.log("Home component unmounted");
+  },
+  activated() {
+    console.log("Home component activated");
+  },
+  deactivated() {
+    console.log("Home component deactivated");
+  },
     name: 'Home',
     data() {
         return {

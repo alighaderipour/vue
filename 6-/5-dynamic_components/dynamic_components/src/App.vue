@@ -23,11 +23,11 @@ export default {
       <option value="About">about</option>
     </select>
   </div>
-  <KeepAlive>
+  <keep-alive>
   
     <component :is="componentName">Home</component>
 
-  </KeepAlive>
+  </keep-alive>
 </template>
 
 <style></style>
