@@ -9,9 +9,9 @@ export default {
 </script>
 
 <template>
-   <div class="min-h-screen flex items-center justify-center bg-black-100">
-    <p class="text-2xl font-bold text-blue-600">
-      I love Vue ❤️
+   <div>
+    <p>
+    
     </p>
   </div>
 </template>
