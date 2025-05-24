@@ -1,6 +1,5 @@
 <script>
 import Questions from './components/Questions.vue';
-
 import Result from './components/Result.vue';
 export default {
     name: 'App',
