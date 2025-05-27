@@ -63,11 +63,8 @@ export default {
                 {
                     text: 'i',
                     is_correct: false 
-                },
-                {
-                  text:'Z',
-                  is_correct:false
                 }
+                
             ] 
         },
     ],
