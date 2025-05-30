@@ -1,0 +1,9 @@
+https://linuxsurvival.com/linux-change-to-parent-directory-part-1/
+
+https://overthewire.org/wargames/bandit/bandit6.html
+
+https://bellard.org/jslinux/vm.html?cpu=riscv64&url=fedora33-riscv.cfg&mem=256
+
+https://mayadevbe.me/tags/bandit/
+
+
