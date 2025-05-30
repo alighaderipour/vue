@@ -7,3 +7,4 @@ https://bellard.org/jslinux/vm.html?cpu=riscv64&url=fedora33-riscv.cfg&mem=256
 https://mayadevbe.me/tags/bandit/
 
 
+https://shell.cloud.google.com/
