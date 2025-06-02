@@ -14,3 +14,5 @@ https://web.dev/learn/html
 
 
 https://labex.io/labs/linux-your-first-linux-lab-270253?course=quick-start-with-linux
+
+https://linuxjourney.com/lesson/less-command
