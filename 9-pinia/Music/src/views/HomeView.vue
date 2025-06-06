@@ -1,9 +1,17 @@
-<script setup>
-import TheWelcome from '../components/TheWelcome.vue'
+<script>
+export default {
+    name: '',
+    data() {
+        return {
+        }
+    }
+}
 </script>
 
 <template>
-  <main>
-    <TheWelcome />
-  </main>
+    <div>
+    </div>
 </template>
+
+<style>
+</style>

@@ -3,14 +3,72 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" href="fav1.jpg" >
+    <link rel="icon" href="fav1.jpg" />
     <title>Document</title>
     <style>
+      table {
+        border-collapse: collapse;
+        border: 2px solid;
+      }
 
+      tr {
+        border: 2px solid;
+        justify-content: center;
+      }
+      tr:hover {
+        background-color: #d6eeee;
+      }
+      tr:nth-child(even) {
+        background-color: rgba(150, 212, 212, 0.4);
+      }
+
+      th:nth-child(even),
+      td:nth-child(even) {
+        background-color: rgba(150, 212, 212, 0.4);
+      }
+      th {
+        border: 2px solid;
+        justify-content: center;
+      }
+
+      td {
+        border: 2px solid;
+        justify-content: center;
+      }
     </style>
   </head>
   <body>
-  <p>hi</p>
-
+    <table>
+      <tr>
+        <th>row</th>
+        <th colspan="2">family</th>
+        <th>age</th>
+      </tr>
+      <tr>
+        <td>1</td>
+        <td colspan="2">ali ghaderi</td>
+        <td>34</td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td colspan="2">ali ghaderi</td>
+        <td>34</td>
+      </tr>
+      <tr>
+        <td>3</td>
+        <td colspan="2">ali ghaderi</td>
+        <td>34</td>
+      </tr>
+      <tr>
+        <td>4</td>
+        <td colspan="2">ali ghaderi</td>
+        <td>34</td>
+      </tr>
+      <tr>
+        <td>5</td>
+        <td colspan="2">ali ghaderi</td>
+        <td>34</td>
+      </tr>
+    </table>
   </body>
 </html>
