@@ -1,33 +1,24 @@
 <template>
   <div class="ctr">
-    <div class="questions-ctr">
-        <div class="progress">
-            <div class="bar"></div>
-            <div class="status">1 out of 3 questions answered</div>
-        </div>
-        <div class="single-question">
-            <div class="question">Sample Question 1</div>
-            <div class="answers">
-                <div class="answer">Sample Answer 1</div>
-                <div class="answer">Sample Answer 2</div>
-                <div class="answer">Sample Answer 3</div>
-                <div class="answer">Sample Answer 4</div>
-            </div>
-        </div>
-    </div>
-    <div class="result">
-        <div class="title">You got sample result 1!</div>
-        <div class="desc">
-            Enter a short description here about the result.
-        </div>
-    </div>
+    <questions :questions="questions"/>
+    <results :results="results" />
+    
+    
     <button type="button" class="reset-btn">Reset</button>
-</div>
+  </div>
 </template>
 
 
 <script>
+import Results from './components/Results.vue';
+import Questions from './components/Questions.vue';
+
 export default {
+  name:'App',
+  components:{
+    Questions,
+    Results
+  },
   data(){
     return {
         questions: [
@@ -111,7 +102,7 @@ export default {
 }
 </script>
 
-<style scoped>
+<style>
 * {
   box-sizing: border-box;
 }
