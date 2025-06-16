@@ -1,9 +1,12 @@
 <template>
   <div class="ctr">
-    <questions :questions="questions" :questionsAnswered="questionsAnswered" v-if="questionsAnswered < questions.length"
-    @question-answered ="questionAnswered"
-    />
-    <results :all_results="all_results" :totalCorrect="totalCorrect" v-else/>
+    <transition name="fade" mode="out-in">
+      
+      <questions :questions="questions" :questionsAnswered="questionsAnswered" v-if="questionsAnswered < questions.length"
+      @question-answered ="questionAnswered"
+      />
+      <results :all_results="all_results" :totalCorrect="totalCorrect" v-else/>
+    </transition>
      
     
     <button type="button" class="reset-btn" @click.prevent="resetBtn" v-if="questionsAnswered=== questions.length"> reset</button>  </div>
@@ -255,5 +258,19 @@ body {
   border: 0;
   outline: 0;
 }
+.fade-enter-from{
+  opacity: 0;
+}
+.fade-enter-active{
+  transition: all 0.3s linear;
+}
 
+.fade-leave-active{
+  transition: all 0.3s linear;
+  opacity: 0;
+  position: absolute;
+}
+.fade-leave-to{
+  opacity: 0;
+}
 </style>

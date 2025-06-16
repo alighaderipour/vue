@@ -1,6 +1,6 @@
 <template>
   <div class="result">
-    <p> your result is {{ totalCorrect }} {{ resultIndex }}</p>
+    
     <div class="title">{{ all_results[resultIndex].title }}</div>
     <div class="desc">{{ all_results[resultIndex].desc }}</div>
   </div>
@@ -25,6 +25,6 @@ export default{
         });
         return returned_index
       },
-    },
+    }
 };
 </script>
