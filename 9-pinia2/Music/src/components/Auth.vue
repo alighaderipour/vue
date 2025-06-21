@@ -23,7 +23,7 @@
               <p class="text-2xl font-bold">Your Account</p>
               <!-- Modal Close Button -->
               <div class="modal-close cursor-pointer z-50">
-                <i class="fas fa-times" @click.prevent="toggleAuthModalClose"></i>
+                <i class="fas fa-times" @click="modalVisibility=false"></i>
               </div>
             </div>
 
@@ -148,8 +148,11 @@
     </div>
 </template>
 
+<!-- appoarch 1 -->
 
-
+<!-- <div class="modal-close cursor-pointer z-50">
+  <i class="fas fa-times" @click.prevent="toggleAuthModalClose"></i>
+</div> -->
 <!-- <script>
 import { mapState, mapWritableState } from 'pinia';
 import useModalStore from "@/stores/modal";
@@ -167,7 +170,13 @@ export default {
   }
 }
 </script> -->
-<script>
+
+
+<!-- appoarch 2 -->
+<!-- <div class="modal-close cursor-pointer z-50">
+  <i class="fas fa-times" @click.prevent="toggleAuthModalClose"></i>
+</div> -->
+<!-- <script>
 import { mapState } from 'pinia';
 import useModalStore from "@/stores/modal";
 
@@ -183,17 +192,18 @@ export default {
     }
   }
 }
-</script>
+</script> -->
 
 
 
 
 
-
+<!-- appoarch 3 -->
 
 <!-- Modal Close Button -->
 <!-- <div class="modal-close cursor-pointer z-50">
   <i class="fas fa-times" @click="isOpen=false"></i>
+
 </div> -->
 
 <!-- <script>
@@ -209,3 +219,25 @@ export default {
  
 }
 </script> -->
+
+
+<!-- appoarch 4 ----------------- use alias ------------------------------>
+<!-- <div class="modal-close cursor-pointer z-50">
+  <i class="fas fa-times" @click="modalVisibility=false"></i>
+
+</div> -->
+<script>
+import { mapState, mapWritableState } from 'pinia';
+import useModalStore from "@/stores/modal";
+
+export default {
+  name: "AuthHeader",
+  computed: {
+    ...mapState(useModalStore, ["hiddenClass"]),
+    ...mapWritableState(useModalStore, {
+      modalVisibility: "isOpen"
+    })
+  },
+ 
+}
+</script>
