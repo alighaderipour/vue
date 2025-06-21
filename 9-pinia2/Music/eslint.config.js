@@ -12,6 +12,7 @@ export default defineConfig([
     files: ['**/*.{js,mjs,jsx,vue}'],
   },
 
+  // Add global ignore patterns properly inside the array
   globalIgnores(['**/dist/**', '**/dist-ssr/**', '**/coverage/**']),
 
   {
@@ -22,20 +23,34 @@ export default defineConfig([
     },
   },
 
+  // Recommended JS config
   js.configs.recommended,
+
+  // Vue plugin essential rules (flat config)
   ...pluginVue.configs['flat/essential'],
-  
+
+  // Vitest recommended rules for test files
   {
     ...pluginVitest.configs.recommended,
     files: ['src/**/__tests__/*'],
   },
-  
+
+  // Cypress recommended rules for E2E tests
   {
     ...pluginCypress.configs.recommended,
-    files: [
-      'cypress/e2e/**/*.{cy,spec}.{js,ts,jsx,tsx}',
-      'cypress/support/**/*.{js,ts,jsx,tsx}'
-    ],
+    files: ['cypress/e2e/**/*.{cy,spec}.{js,ts,jsx,tsx}', 'cypress/support/**/*.{js,ts,jsx,tsx}'],
   },
+
+  // Skip formatting for prettier
   skipFormatting,
+
+  // Add env and rules in an object
+  {
+    env: {
+      node: true,
+    },
+    rules: {
+      'vue/multi-word-component-names': 'off',
+    },
+  },
 ])
