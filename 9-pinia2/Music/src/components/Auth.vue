@@ -23,7 +23,7 @@
               <p class="text-2xl font-bold">Your Account</p>
               <!-- Modal Close Button -->
               <div class="modal-close cursor-pointer z-50">
-                <i class="fas fa-times"></i>
+                <i class="fas fa-times" @click.prevent="toggleAuthModalClose"></i>
               </div>
             </div>
 
@@ -148,13 +148,64 @@
     </div>
 </template>
 
+
+
+<!-- <script>
+import { mapState, mapWritableState } from 'pinia';
+import useModalStore from "@/stores/modal";
+
+export default {
+  name: "AuthHeader",
+  computed: {
+    ...mapState(useModalStore, ["hiddenClass"]),
+    ...mapWritableState(useModalStore, ["isOpen"])
+  },
+  methods: {
+    toggleAuthModalClose() {
+     this.isOpen =false
+    }
+  }
+}
+</script> -->
 <script>
 import { mapState } from 'pinia';
-import useModalStore from "@/stores/modal"
-export default{
-    name:"AuthHeader",
-    computed:{
-      ...mapState(useModalStore, ["hiddenClass"])
+import useModalStore from "@/stores/modal";
+
+export default {
+  name: "AuthHeader",
+  computed: {
+    ...mapState(useModalStore, ["hiddenClass"])
+  },
+  methods: {
+    toggleAuthModalClose() {
+      const modalStore = useModalStore();
+      modalStore.isOpen = false;
     }
+  }
 }
 </script>
+
+
+
+
+
+
+
+<!-- Modal Close Button -->
+<!-- <div class="modal-close cursor-pointer z-50">
+  <i class="fas fa-times" @click="isOpen=false"></i>
+</div> -->
+
+<!-- <script>
+import { mapState, mapWritableState } from 'pinia';
+import useModalStore from "@/stores/modal";
+
+export default {
+  name: "AuthHeader",
+  computed: {
+    ...mapState(useModalStore, ["hiddenClass"]),
+    ...mapWritableState(useModalStore, ["isOpen"])
+  },
+ 
+}
+</script> -->
