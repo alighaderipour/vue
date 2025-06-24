@@ -7,5 +7,5 @@ export default {
     app.component('VeeField', VeeField)
     app.component('ErrorMessage', ErrorMessage)
     defineRule('required', required)
-  },
+  }, 
 }
