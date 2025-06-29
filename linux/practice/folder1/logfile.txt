@@ -810,3 +810,9 @@ lrwxrwxrwx  1 root root           8 Apr  8  2024 ypdomainname -> hostname
 -rwxr-xr-x  1 root root        2206 Apr  8  2024 zless
 -rwxr-xr-x  1 root root        1842 Apr  8  2024 zmore
 -rwxr-xr-x  1 root root        4577 Apr  8  2024 znew
+total 68
+drwxrwxrwx 1 shahaz shahaz   512 Jun 29 11:08 .
+drwxrwxrwx 1 shahaz shahaz   512 Jun 28 12:16 ..
+-rwxrwxrwx 1 shahaz shahaz 50395 Jun 29 11:15 logfile.txt
+-rwxrwxrwx 1 shahaz shahaz   214 Jun 29 11:01 ls-output.txt
+-rwxrwxrwx 1 shahaz shahaz    16 Jun 28 12:16 mytext.txt

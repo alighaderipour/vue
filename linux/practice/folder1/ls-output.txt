@@ -1,0 +1,5 @@
+total 0
+drwxrwxrwx 1 shahaz shahaz 512 Jun 29 10:57 .
+drwxrwxrwx 1 shahaz shahaz 512 Jun 28 12:16 ..
+-rwxrwxrwx 1 shahaz shahaz   0 Jun 29 10:58 ls-output.txt
+-rwxrwxrwx 1 shahaz shahaz  16 Jun 28 12:16 mytext.txt
