@@ -1,9 +1,9 @@
 h1{
-    font-weight: 400;
+    text-transform: uppercase;
 }
 h2{
-    font-weight: 500;
+    text-transform: lowercase;
 }
 p{
-    font-weight: 700;
+    text-transform: capitalize;
 }
